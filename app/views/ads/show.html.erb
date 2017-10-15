@@ -1,0 +1,29 @@
+<div class="col-md-3">
+ <%= image_tag @ad.image, class: "img-responsive" %>
+</div>
+
+<div class="col-md-9">
+ <div class="col-md-12">
+  <h4><%= @ad.title %></h4>
+</div>
+<hr>
+<div class="col-md-6">
+ <strong>Price:</strong>
+  <%= @ad.price %>
+ </div>
+ <hr>
+ <div class="col-md-6">
+  <strong>Address: </strong>
+   <%= @ad.address %>, <%= @ad.city %>
+  </div>
+  <hr>
+ <div class="col-md-12">
+  <strong>Description:</strong><br>
+  <%= simple_format @ad.decsription %>
+ </div>
+ </div>
+
+
+
+<%= link_to 'Edycja', edit_ad_path(@ad) %> |
+<%= link_to 'Cofnij', ads_path %>
